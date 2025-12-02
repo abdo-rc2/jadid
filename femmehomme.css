@@ -1,0 +1,182 @@
+/* le menu de site */
+header{
+    background-color: sienna;
+    display: flex;
+    height: 40px;
+}
+header span{
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: lighter;
+    text-decoration:unset;
+    margin: auto;
+    align-items: center;
+}
+.navbar{
+    position:sticky     ; top: 0;
+    z-index: 1000;
+}
+.navbar-brand img {
+    height: 100px;
+  }
+  .nav-link {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .navbar .icons {
+    display: flex;
+  }
+  .navbar .icons i {
+    font-size: 1.2rem;
+    margin-left: 20px;
+  }
+  /* fin de menu */
+
+
+  /* footer */
+/* les information de site web */
+.information-lev{
+    margin-bottom: 100px;
+  }
+  .ma3loma {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+  
+  }
+  .icon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .text {
+    flex-grow: 1;
+  }
+  /* fin footer */
+
+
+  /* scrollbar */
+  body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, sienna, #ffb300, #423708);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #d6f8a3, sienna, #ffff03);
+}
+
+/* fin scrollbar */
+
+  /* les liste vedeur */
+  .header {
+    margin: 20px 0;
+  }
+  .filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* les article et les prouduit */
+.art-homme {
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+    margin: 40px auto;
+  }
+  
+  .produit {
+    width: 200px;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Conteneur des images */
+  .product-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  /* Image principale */
+  .product-image .main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+    
+    
+  }
+  
+  /* Image au hover (par défaut masquée) */
+  .product-image .hover-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transform: scale(1.1);
+    
+    
+  }
+  
+  /* hover */
+  .product-image:hover .main-image {
+    opacity: 1;
+    
+  }
+  
+  .product-image:hover .hover-image {
+    opacity: 1;
+  }
+  
+  /*  infos produit */
+  
+  
+  .product-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .product-info .price {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: gray;
+    margin-right: 8px;
+  }
+  
+  .product-info .price .current-price {
+    color: sienna;
+    font-weight: bold;
+  }
+  
+  
+  
+  .art-homme a{
+    text-decoration: none;
+    color: black;
+  }
+/* fin des prouduits */
+/* la barre dyal ar9am lakhra */
+.pagination {
+    justify-content: center;
+}

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit Sauvage</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="website icon" href="image/logo abdox.png" type="name" >
+    <style>
+        /* scrollbar */
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        body::-webkit-scrollbar-track {
+            background: #ffffff;
+            border-radius: 10px;
+        }
+        
+        body::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, sienna, #ffb300, #423708);
+            border-radius: 10px;
+        }
+        
+        body::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #d6f8a3, sienna, #ffff03);
+        }
+
+        /* fin scrollbar */
+
+        /* le menu de site */
+
+    .navbar{
+        position:sticky     ; top: 0;
+        z-index: 1000;
+    }
+    .navbar-brand img {
+        height: 100px;
+      }
+      .nav-link {
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .navbar .icons {
+        display: flex;
+      }
+      .navbar .icons i {
+        font-size: 1.2rem;
+        margin-left: 20px;
+      }
+      /* fin de menu */
+    
+    
+      /* footer */
+    /* les information de site web */
+    .information-lev{
+        margin-bottom: 100px;
+      }
+      .ma3loma {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+      
+      }
+      .icon {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      .text {
+        flex-grow: 1;
+      }
+      /* fin footer */
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-infoo {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .btn-buy {
+            background-color: #8B5E3C;
+            color: white;
+            border-radius: 30px;
+        }
+
+        .btn-buy:hover {
+            background-color: #6f452c;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .old-pricee {
+            text-decoration: line-through;
+            color: #6c757d;
+        }
+        /* les article et les prouduit */
+.art-homme {
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+.produit {
+  width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+/* Conteneur des images */
+.product-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Image principale */
+.product-image .main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+  
+  
+}
+
+/* Image au hover (par défaut masquée) */
+.product-image .hover-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  transform: scale(1.1);
+  
+  
+}
+
+/* hover */
+.product-image:hover .main-image {
+  opacity: 1;
+  
+}
+
+.product-image:hover .hover-image {
+  opacity: 1;
+}
+
+/*  infos produit */
+
+
+.product-info h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.product-info .price {
+  font-size: 14px;
+  color: #333;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 8px;
+}
+
+.product-info .price .current-price {
+  color: sienna;
+  font-weight: bold;
+}
+
+
+
+.art-homme a{
+  text-decoration: none;
+  color: black;
+}
+
+/* bouton tout afficher */
+.plus-art{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+.plus-art span{
+  color: sienna;
+  border: sienna 1px solid;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  
+}
+.plus-art a{
+  text-decoration: none;
+}
+.plus-art :hover{
+  background-color: sienna;
+  color: white;
+  border-radius: 30px;
+
+}
+
+    </style>
+</head>
+<body>
+     <!-- lentete de la page -->
+    
+
+     <nav class="navbar navbar-expand-lg bg-white border-bottom">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="principale.html">
+            <img src="image/logo abdox.png" alt="Logo">
+          </a>
+          
+          
+          <!-- Navigation links -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="principale.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="femme.html">Parfum Femme</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="homme.html">Parfum Homme</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pack.html">Coffret & Pack</a>
+              </li>
+            </ul>
+            <!-- Icons -->
+            <div class="icons">
+              <a href="#"><i class="bi bi-search"></i></a>
+              <a href="#"><i class="bi bi-bag"></i></a>
+              <a href="cooection.html"><i class="bi bi-person-circle"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+<div class="container py-5">
+    <div class="row align-items-center">
+        <!-- Image du produit -->
+        <div class="col-md-6 text-center">
+          <div class="product-image">
+            <img class="main-image" src="image/homme/sauvage1.png" alt="Parfum Homme 2">
+            <img class="hover-image" src="image/homme/sauvage2.png" alt="Parfum Homme 2 Hover">
+          </div>
+        </div>
+
+        <!-- Informations du produit -->
+        <div class="col-md-6">
+            <div class="product-infoo">
+                <h1>Sauvage - Eau de Parfum 100ml</h1>
+                <p><span class="old-pricee">1,199.00 Dh</span> <span class="price">499.00 Dh</span></p>
+                <span class="badge bg-success">En vente</span>
+                <p class="mt-3">L’eau de parfum Sauvage de Dior est une fragrance masculine inspirée du désert à l'heure du soleil couchant.</p>
+                <p>À travers Sauvage Eau de Parfum, la maison Dior a sélectionné une vanille d’exception originaire de Papouasie-Nouvelle-Guinée. Sur un fond boisé ambré, elle diffuse son exotisme gourmand et donne à Sauvage des accents orientaux sensuels.</p>
+                <a href="#" class="btn btn-buy px-4 py-2 mt-3">Commander maintenant - Paiement à la livraison</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<article>
+  <div class="art-homme">
+    <!-- Premier produit -->
+    <div class="produit">
+      <a href=""> <div class="product-image">
+       <img class="main-image" src="image/femme/lancome1.webp" alt="Parfum Homme 2">
+       <img class="hover-image" src="image/femme/lancome2.webp" alt="Parfum Homme 2 Hover">
+     </div>
+     <div class="product-info">
+       <span class="label">En vente</span>
+       <h3>LANCÔME La vie est belle - Eau de Parfum 75ML</h3>
+       <p class="price">
+         <span class="old-price">1,010.00 Dh</span>
+         <span class="current-price">449.00 Dh</span>
+       </p>
+     </div></a>
+     </div>
+
+    <!-- Deuxième produit -->
+    <div class="produit">
+     <a href=""> <div class="product-image">
+      <img class="main-image" src="image/homme/bleu-de-chanel1.jpg" alt="Parfum Homme 2">
+      <img class="hover-image" src="image/homme/bleu-de-chanel2.webp" alt="Parfum Homme 2 Hover">
+    </div>
+    <div class="product-info">
+      <span class="label">En vente</span>
+      <h3>BLEU CHANEL Parfum 100 ML</h3>
+      <p class="price">
+        <span class="old-price">1,299.00 Dh</span>
+        <span class="current-price">499.00 Dh</span>
+      </p>
+    </div></a>
+    </div>
+     <!-- 3 produit -->
+
+    <div class="produit">
+      <a href=""><div class="product-image">
+        <img class="main-image" src="image/homme/versace1.png" alt="Parfum Homme 2">
+        <img class="hover-image" src="image/homme/versatce-eros2.png" alt="Parfum Homme 2 Hover">
+      </div>
+      <div class="product-info">
+        <span class="label">En vente</span>
+        <h3>VERSACE Eros Eau de parfum</h3>
+        <p class="price">
+          <span class="old-price">1,300.00 Dh</span>
+          <span class="current-price">499.00 Dh</span>
+        </p>
+      </div></a>
+    </div>
+
+
+     <!-- 4 produit -->
+     <div class="produit">
+      <a href=""> <div class="product-image">
+       <img class="main-image" src="image/homme/paco-pur1.webp" alt="Parfum Homme 2">
+       <img class="hover-image" src="image/homme/paco-pur2.webp" alt="Parfum Homme 2 Hover">
+     </div>
+     <div class="product-info">
+       <span class="label">En vente</span>
+       <h3>PACO RABANNE Pure XS</h3>
+       <p class="price">
+         <span class="old-price">940.00 Dh</span>
+         <span class="current-price">499.00 Dh</span>
+       </p>
+     </div></a>
+     </div>
+      <!-- 5 produit -->
+      <div class="produit">
+        <a href=""> <div class="product-image">
+         <img class="main-image" src="image/homme/armane-prive1.webp" alt="Parfum Homme 2">
+         <img class="hover-image" src="image/homme/armane-prive2.webp" alt="Parfum Homme 2 Hover">
+       </div>
+       <div class="product-info">
+         <span class="label">En vente</span>
+         <h3>ARMANI PRIVÉ OUD ROYAL - Eau de Parfum 100ML</h3>
+         <p class="price">
+           <span class="old-price">2,790.00 Dh</span>
+           <span class="current-price">499.00 Dh</span>
+         </p>
+       </div></a>
+       </div>
+      </article>
+       <div class="plus-art">
+        <a href="homme.html"><span>Tout afficher</span></a>
+      </div>
+
+<footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <!-- Colonne 1 -->
+        <div class="col-md-6 mb-3">
+          <h5>Parfum ABDOX</h5>
+          <p>
+            Nous proposons des parfums uniques et raffinés pour sublimer votre style.
+Senteurs orientales, florales ou boisées, trouvez votre fragrance idéale.
+Parfum Abdox, là où chaque goutte raconte une histoire.
+          </p>
+        </div>
+        <!-- Colonne 2 -->
+        <div class="col-md-3 mb-3">
+          <h5>Politique</h5>
+          <ul class="list-unstyled">
+            <li><a href="" class="text-light text-decoration-none">Conditions d'utilisation</a></li>
+            <li><a href="" class="text-light text-decoration-none">Politique de Confidentialité</a></li>
+            <li><a href="" class="text-light text-decoration-none">Politique de livraison</a></li>
+            <li><a href="" class="text-light text-decoration-none">Qui sommes nous ?</a></li>
+          </ul>
+        </div>
+        <!-- Colonne 3 -->
+        <div class="col-md-3 mb-3 text-center">
+          <h5>Suivez-nous</h5>
+          <div>
+            <a href="https://www.facebook.com" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="https://www.instagram.com" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="https://www.twitter.com" class="text-light me-3"><i class="bi bi-twitter fs-4"></i></a>
+            <a href="https://www.linkedin.com" class="text-light me-3"><i class="bi bi-linkedin fs-4"></i></a>
+          </div>
+          <h5 class="mt-4">Connexion</h5>
+          <a href="cooection.html" class="text-light"><i class="bi bi-person-circle fs-4"></i></a>
+        </div>
+      </div>
+      <hr class="text-light">
+      <div class="text-center">
+        &copy; 2025, Parfum ABDOX
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
